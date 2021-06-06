@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ShiroDemo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mercury?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1111
+    type: com.alibaba.druid.pool.DruidDataSource
+  thymeleaf:
+    cache: false
+
+mybatis:
+  type-aliases-package: com.yyl.mercury.Entity
+  mapper-locations: classpath*:mapping/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

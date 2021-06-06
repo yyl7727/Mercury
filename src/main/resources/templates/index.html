@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+index
+<a th:href="@{/user/logout}">退出登录</a>
+
+<a shiro:hasPermission="user:select" th:href="@{/user/select}">查询</a>
+<a shiro:hasPermission="user:delete" th:href="@{/user/delete}">删除</a>
+</body>
+</html>
