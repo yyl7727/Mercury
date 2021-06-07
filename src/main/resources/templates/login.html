@@ -1,15 +1,113 @@
 <!DOCTYPE html>
 <html lang="zh" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <form th:action="@{/user/login}" method="post">
-        <input type="text" name="userName"/><br/>
-        <input type="password" name="password"/><br/>
-        <input type="submit" value="提交"/>
-        <span th:text="${error}"></span>
-    </form>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Mercury</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <!-- App favicon -->
+        <link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+
+        <!-- App css -->
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/icons.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/app.min.css}" rel="stylesheet"/>
+
+    </head>
+
+    <body class="authentication-bg">
+        <div class="account-pages my-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="row">
+                                    <div class="col-md-6 p-5">
+                                        <div class="mx-auto mb-5">
+                                            <a href="index.html">
+                                                <img th:src="@{/images/logo.png}" alt="" height="24" />
+                                                <h3 class="d-inline align-middle ml-1 text-logo">Mercury</h3>
+                                            </a>
+                                        </div>
+
+                                        <h6 class="h5 mb-0 mt-4"></h6>
+                                        <p class="text-muted mt-1 mb-4"></p>
+
+                                        <form action="#" class="authentication-form">
+                                            <div class="form-group">
+                                                <label class="form-control-label">用户名</label>
+                                                <div class="input-group input-group-merge">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="icon-dual" data-feather="user"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="email" placeholder="请输入用户名">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mt-4">
+                                                <label class="form-control-label">密码</label>
+                                                <a href="pages-recoverpw.html" class="float-right text-muted text-unline-dashed ml-1">忘记密码？</a>
+                                                <div class="input-group input-group-merge">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="icon-dual" data-feather="lock"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="password"
+                                                        placeholder="请输入密码">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-4">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="checkbox-signin" checked>
+                                                    <label class="custom-control-label" for="checkbox-signin">记住我</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-0 text-center">
+                                                <button class="btn btn-primary btn-block" type="submit">登录</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-6 d-none d-md-inline-block">
+                                        <div class="auth-page-sidebar">
+                                            <div class="overlay"></div>
+                                            <div class="auth-user-testimonial">
+                                                <p class="font-size-24 font-weight-bold text-white mb-1">MERCURY</p>
+                                                <p class="lead">Web Application Of </p>
+                                                <p>SpringBoot + Thymeleaf + Shiro</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end card-body -->
+                        </div>
+                        <!-- end card -->
+
+                        <div class="row mt-3">
+                            <div class="col-12 text-center">
+                                <p class="text-muted">没有账号？ <a href="pages-register.html" class="text-primary font-weight-bold ml-1">现在注册</a></p>
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end page -->
+
+        <!-- Vendor js -->
+        <script th:src="@{/js/vendor.min.js}"></script>
+        <!-- App js -->
+        <script th:src="@{/js/app.min.js}"></script>
+    </body>
 </html>

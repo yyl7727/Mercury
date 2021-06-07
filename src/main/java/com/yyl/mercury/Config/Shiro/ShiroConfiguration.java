@@ -84,6 +84,9 @@ public class ShiroConfiguration {
         map.put("/user/logout", "logout");
         map.put("/user/select", "perms[user:select]");
         map.put("/user/delete", "perms[user:delete]");
+        map.put("/css/**", "anon");
+        map.put("/js/**", "anon");
+        map.put("/images/**", "anon");
         map.put("/**", "authc");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);

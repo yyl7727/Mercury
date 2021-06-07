@@ -22,7 +22,7 @@ public class UserController {
         Subject subject = SecurityUtils.getSubject();
         try {
             subject.login(token);
-            return "index";
+            return "index2";
         } catch (UnknownAccountException e) {
             model.addAttribute("error", "不存在的用户");
         } catch (IncorrectCredentialsException e) {
@@ -30,18 +30,18 @@ public class UserController {
         } catch (AuthenticationException e) {
             model.addAttribute("error", "登录异常");
         }
-        return "login";
+        return "login1";
     }
 
     @RequiresPermissions("user:select")
     @RequestMapping("/select")
     public String testSelect() {
-        return "index";
+        return "index2";
     }
 
     @RequiresPermissions("user:delete")
     @RequestMapping("/delete")
     public String testDelete() {
-        return "index";
+        return "index2";
     }
 }

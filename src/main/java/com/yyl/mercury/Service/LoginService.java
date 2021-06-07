@@ -10,7 +10,8 @@ import org.springframework.util.StringUtils;
 public class LoginService {
     public SysUser login(String userName, String password) {
         if (StringUtils.isEmpty(userName) || StringUtils.isEmpty(password)) {
-            throw new LoginInfoEmptyException();
+            //throw new LoginInfoEmptyException();
         }
+        return new SysUser();
     }
 }
